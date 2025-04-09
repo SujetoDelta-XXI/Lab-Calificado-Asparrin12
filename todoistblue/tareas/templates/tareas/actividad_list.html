@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Actividades</h1>
+<h1>
+    {% if actividad_completada %}
+        Tareas Completadas
+    {% else %}
+        Tareas Incompletas
+    {% endif %}
+</h1>
 <a href="{% url 'actividad_create' %}" class="btn btn-primary mb-3">Agregar Actividad</a>
 <table class="table table-striped">
     <thead>

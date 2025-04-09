@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Todoist Blue</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -28,6 +27,10 @@
 <body>
 <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="{% url 'actividad_list' %}">Todoist Blue</a>
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" href="{% url 'actividad_list_completada' %}">Completadas</a>
+    <a class="nav-item nav-link" href="{% url 'actividad_list_incompleta' %}">Incompletas</a>
+  </div>
 </nav>
 <div class="container mt-4">
     {% block content %}
